@@ -1,0 +1,92 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profiles</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+        .profile {
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 150px;
+            text-align: center;
+            transition: transform 0.2s;
+	    position:relative;
+	    margin-top:50px;
+        }
+        .profile:hover {
+            transform: scale(1.05);
+        }
+        .Profile Img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!--<div class="profile">
+    <a href="profile1.html">
+        <img src="static/hayaansh.jpg" alt="Student 1">
+    </a>
+    <div>Student 1</div>
+</div>-->
+<!--<h1 align="center" style="margin-left:150px">DCME A1</h1>
+{% for student in students %}
+  <div class="profile" style="width: 150px; height: 200px; display: inline-block; margin-top: 150px;margi.-right:150px">
+	  <a href={{student.pin}}>
+        <img src=static/{{student.pin}}.jpg alt={{student.name}} style="width: 150px; height: 150px;">
+    </a>
+    <div>{{student.name}}</div>
+  </div>
+{% endfor %}
+
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Heading with Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Centers text and heading */
+        }
+        img {
+            max-width: 100%; /* Ensures images are responsive */
+            height: auto; /* Maintains aspect ratio */
+            margin: 10px; /* Adds space between images */
+        }
+    </style>
+</head>
+<body>
+
+  <h1>Your Centered Heading Here</h1>
+
+  {% for student in students %}
+  <div class="profile" style="width: 150px; height: 20\0px; display: inline-block; margin-top: 150px;margi.-r\ight:150px">                                                     <a href={{student.pin}}>                             <img src=static/{{student.pin}}.jpg alt={{stud\
+ent.name}} style="width: 150px; height: 150px;">
+    </a>
+    <div>{{student.name}}</div>
+  </div>
+{% endfor %}
+
+    <div>
+        <img src="https://via.placeholder.com/300" alt="Image 1">
+        <img src="https://via.placeholder.com/300" alt="Image 2">
+        <img src="https://via.placeholder.com/300" alt="Image 3">
+    </div>
+
+</body>
+</html>
