@@ -1,0 +1,124 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profiles</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+        .profile {
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 150px;
+            text-align: center;
+            transition: transform 0.2s;
+	    position:relative;
+	    margin-top:50px;
+        }
+        .profile:hover {
+            transform: scale(1.05);
+        }
+        .Profile Img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!--<div class="profile">
+    <a href="profile1.html">
+        <img src="static/hayaansh.jpg" alt="Student 1">
+    </a>
+    <div>Student 1</div>
+</div>-->
+<!--<h1 align="center" style="margin-left:150px">DCME A1</h1>
+{% for student in students %}
+  <div class="profile" style="width: 150px; height: 200px; display: inline-block; margin-top: 150px;margi.-right:150px">
+	  <a href={{student.pin}}>
+        <img src=static/{{student.pin}}.jpg alt={{student.name}} style="width: 150px; height: 150px;">
+    </a>
+    <div>{{student.name}}</div>
+  </div>
+{% endfor %}
+
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCME A1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Centers text and heading */
+        }
+        img {
+            max-width: 100%; /* Ensures images are responsive */
+            height: auto; /* Maintains aspect ratio */
+            margin: 10px; /* Adds space between images */
+		}
+
+		.sidenav {                                          height: 100%;
+			 width: 0; 
+			 position: fixed; /* Stay in place */           z-index: 1; /* Stay on top */                  top: 0; /* Stay at the top */
+			 left: 0;                                       background-color: #111; /* Black*/
+			 overflow-x: hidden; /* Disable horizont    al scroll */                                       padding-top: 60px; /* Place content 60p    x from the top */                                  transition: 0.5s; /* 0.5 second transit    ion effect to slide in the sidenav */                 }
+
+	.sidenav a {                                         padding: 8px 8px 8px 8px;                      text-decoration: none;                         font-size: 15px;                               color: #818181;                                display: block;
+	      transition: 0.3s;
+		 }                                                                                                 /* When you mouse over the navigation links, ch    ange their color */                  .sidenav a:hover {                                  color: #f1f1f1;
+				 }
+
+	.sidenav .closebtn {                               position: absolute;
+		   top: 0;
+			 right: 25px;
+			 font-size: 36px;
+			margin-left: 50px;
+		}
+	                                                   /* Style page content - use this if you want to     push the page content to the right when you op    en the side navigation */                         #main {
+		       transition: margin-left .5s;
+		       padding: 20px;                              }
+     
+	.logo-container {                                              position: absolute;                                    top: 0;                                            left: 0;                           }                                                  .logo {                                                        width: 40px; /* Adjust as ne\eded */                                                                      height: 40px; /* Adjust \as needed */
+          }
+    </style>
+	<script>
+		    function openNav() {
+			         document.getElementById("mySidenav").style.width = "100px";
+			           }
+		                                                       /* Set the width of the side navigation to 0 */
+			function closeNav() {                              document.getElementById("mySidenav").style.width = "0";                                }                                                                                   </script>
+</head>
+<body>
+	<div class="logo-container">                      <img src="static/crrplogo.jpg" alt="Logo" class="logo" onclick="openNav()">                  </div>                                                                                                                                              <div id="mySidenav" class="sidenav">             <a href="javascript:void(0)" class="closebtn"     onclick="closeNav()">&times;</a>                   <a href="/">Home</a>                              <a href="{% url 'students' %}">Students</a>      <a href="/faculty">Faculty</a>                 <a href="/contact">Contact</a>                  </div>
+
+  <h2>D.CM.E A1 STUDENTS</h2>
+<span onclick="openNav()" style="position: absolute; top: 60px; left: 10px; font-size:15px"">MENU</span>
+
+  {% for student in students %}
+  <div class="profile" style="width: 150px; height: 200px; display: inline-block; margin-top: 50px;margi.-right:150px">                          
+	  <a href=students/{{student.pin}}>                             <img src=static/{{student.pin}}.jpg alt={{student.name}} style="width: 150px; height: 150px;">
+    </a>
+    <div>{{student.name}}</div>
+  </div>
+{% endfor %}
+
+    <!--<div>
+        <img src="https://via.placeholder.com/300" alt="Image 1">
+        <img src="https://via.placeholder.com/300" alt="Image 2">
+        <img src="https://via.placeholder.com/300" alt="Image 3">
+    </div>-->
+
+</body>
+</html>
