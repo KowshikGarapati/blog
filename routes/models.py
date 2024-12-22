@@ -8,7 +8,7 @@ class Student(models.Model):
     department = models.CharField(max_length=50, null=True)
     password = models.CharField(max_length=50, null=True, default="111")
     profile_pic = models.ImageField(upload_to='static/', null=True, blank=True)
-    #image = pin +".jpg"
+    email = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return str(self.name +" "+ self.pin)

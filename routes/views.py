@@ -16,10 +16,10 @@ def login(request):
     return render(request, 'login.html')
 
 def verify(request):
-    email = request.POST.get("email")
+    pin = request.POST.get("pin")
     Password = request.POST.get("password")  
     try:
-        student = Student.objects.get(email=email, password=Password)
+        student = Student.objects.get(pin=pin , password=Password)
         request.session['loggedin_student'] = student
         return redirect("account")
     except e:
